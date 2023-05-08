@@ -26,6 +26,9 @@ tmux bind -T root MouseDown2Pane \
 tmux bind -T copy-mode MouseDown2Pane \
 	"send-keys -X cancel ;\
 	run \"xclip -o | tmux load-buffer - ; tmux paste-buffer\""
+tmux bind -T copy-mode-vi MouseDown2Pane \
+	"send-keys -X cancel ;\
+	run \"xclip -o | tmux load-buffer - ; tmux paste-buffer\""
 
 # Drag select
 tmux bind -T copy-mode MouseDragEnd1Pane \
